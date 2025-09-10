@@ -11,13 +11,16 @@ pipeline{
           #!/bin/bash
           rm -rf build-benchmark
           git clone https://github.com/aedm/build-benchmark.git
-          cd ./build-benchmark
-          cd ./linux
+          
+          
         '''
-                //sh './init-install-toolchains.sh'
-                //sh 'init-clone-repos.sh'     
-                sh 'pwd'
+           dir('build-benchmark') {
+                  sh'cd linux'
+                   sh 'pwd'
                 sh 'ls -al'
+              }               //sh './init-install-toolchains.sh'
+                //sh 'init-clone-repos.sh'     
+               
             }
         }
     }
