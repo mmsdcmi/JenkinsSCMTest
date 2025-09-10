@@ -4,7 +4,8 @@ pipeline{
         stage('Dir'){
             steps{
                 echo 'Hello World'
-                sudo sh 'ls -al'
+                sh 'ls -al'
+                sh 'pwd'
             }
         }
     }
