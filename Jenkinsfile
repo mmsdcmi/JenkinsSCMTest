@@ -3,11 +3,7 @@ pipeline{
     stages{
         stage('Dir'){
             steps{
-                echo 'Hello World'
-                sh 'ls -al'
-                sh 'pwd'
-
-                sh script:'''
+            sh script:'''
           #!/bin/bash
           rm -rf build-benchmark
           git clone https://github.com/aedm/build-benchmark.git
@@ -15,11 +11,11 @@ pipeline{
           
         '''
            dir('build-benchmark/linux') {
-                  
-                   sh 'pwd'
-                sh 'ls -al'
-              }               //sh './init-install-toolchains.sh'
-                //sh 'init-clone-repos.sh'     
+                 sh './init-install-toolchains.sh' 
+                 sh 'init-clone-repos.sh'
+                 sh 'ls -al'
+              }               
+                 
                
             }
         }
