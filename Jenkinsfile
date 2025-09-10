@@ -13,7 +13,7 @@ pipeline{
            dir('build-benchmark/linux') {
                  sh './init-install-toolchains.sh' 
                  sh './init-clone-repos.sh'
-                 sh 'ls -al'
+                 sh './bench-rust.sh'
               }               
                  
                
