@@ -11,7 +11,6 @@ pipeline{
           #!/bin/bash
           rm -rf build-benchmark
           git clone https://github.com/aedm/build-benchmark.git
-          chmod 777 build-benchmark
           cd ./build-benchmark
           cd ./linux
         '''
