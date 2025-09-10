@@ -8,7 +8,7 @@ pipeline{
                 sh 'pwd'
                 sh 'rm -rf build-benchmark'
                 sh 'git clone https://github.com/aedm/build-benchmark.git'
-                sh 'cd build-benchmark/linux'
+                sh 'cd build-benchmark && cd linux'
                 //sh './init-install-toolchains.sh'
                 //sh 'init-clone-repos.sh'     
                 sh 'pwd'
