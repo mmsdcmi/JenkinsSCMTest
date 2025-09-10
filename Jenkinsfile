@@ -14,8 +14,8 @@ pipeline{
           
           
         '''
-           dir('build-benchmark') {
-                  sh'cd linux'
+           dir('build-benchmark/linux') {
+                  
                    sh 'pwd'
                 sh 'ls -al'
               }               //sh './init-install-toolchains.sh'
